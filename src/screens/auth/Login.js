@@ -2,15 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, Image} from 'react-native';
 import {styles} from '../../styles/styles';
 import sayur from '../../assets/images/jpg1.jpg';
-import {
-  Form,
-  Item,
-  Input,
-  Button,
-  Right,
-  Container,
-  Content,
-} from 'native-base';
+import {Form, Item, Input, Button, Container} from 'native-base';
 
 export class Login extends Component {
   render() {
