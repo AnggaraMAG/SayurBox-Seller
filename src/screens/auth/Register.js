@@ -52,6 +52,20 @@ export class Register extends Component {
             <CheckBox checked color="green" />
             <Text>Finish list Screen</Text>
           </View> */}
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 40,
+              justifyContent: 'center',
+            }}>
+            <Text style={{color: '#576357'}}>Sudah memiliki akun?</Text>
+            <Text
+              style={{color: '#438D46'}}
+              onPress={() => this.props.navigation.navigate('Login')}>
+              {' '}
+              Masuk disini
+            </Text>
+          </View>
         </Content>
       </Container>
     );

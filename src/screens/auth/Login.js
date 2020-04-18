@@ -44,7 +44,9 @@ export class Login extends Component {
               <Text style={{color: '#576357'}}>Lupa Password?</Text>
               <Text
                 style={{color: '#438D46'}}
-                onPress={() => this.props.navigation.navigate('Register')}>
+                onPress={() =>
+                  this.props.navigation.navigate('Reset Password')
+                }>
                 {' '}
                 Klik Disini
               </Text>
