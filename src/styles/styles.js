@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
     marginBottom: 17,
   },
   ImgSayur: {
-    height: 245,
-    width: 375,
+    height: '30%',
+    width: '100%',
   },
   Text: {
     justifyContent: 'center',
@@ -35,5 +35,8 @@ export const styles = StyleSheet.create({
   },
   buttonLogin: {
     textAlign: 'center',
+  },
+  placeholder: {
+    color: '#A0A0A0',
   },
 });

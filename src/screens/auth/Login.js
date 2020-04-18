@@ -17,21 +17,22 @@ export class Login extends Component {
     return (
       <Container>
         <Image source={sayur} style={styles.ImgSayur} />
-        <Content padder>
+
+        <Container style={{padding: 10}}>
           <View>
             <Text style={styles.Size}>
               Login untuk mempermudah anda melacak orders
             </Text>
           </View>
-          <View>
+          <View style={{padding: 10}}>
             <Text style={styles.gray}>
               Anda dapat melanjutkan belanja dengan login menggunakan social
               media
             </Text>
           </View>
-          <Form>
+          <Form style={{padding: 10}}>
             <Item regular>
-              <Input placeholder="Email" />
+              <Input placeholder="Email" Size="small" />
             </Item>
             <Item regular style={styles.mt}>
               <Input placeholder="Password" />
@@ -39,22 +40,34 @@ export class Login extends Component {
             <Button full style={{backgroundColor: '#438D46', marginTop: 10}}>
               <Text style={{color: 'white'}}> Login </Text>
             </Button>
+            <View style={{flexDirection: 'row', marginTop: 6}}>
+              <Text style={{color: '#576357'}}>Lupa Password?</Text>
+              <Text
+                style={{color: '#438D46'}}
+                onPress={() => this.props.navigation.navigate('Register')}>
+                {' '}
+                Klik Disini
+              </Text>
+            </View>
           </Form>
-          <View style={{flexDirection: 'row', marginTop: 6}}>
-            <Text style={{color: '#576357'}}>Lupa Password?</Text>
-            <Text
-              style={{color: '#438D46'}}
-              onPress={() => this.props.navigation.navigate('Register')}>
-              {' '}
-              Klik Disini
-            </Text>
-          </View>
+          <Container style={{alignItems: 'center'}}>
+            <View style={{flexDirection: 'row', marginTop: 40}}>
+              <Text style={{color: '#576357'}}>Belum punya account?</Text>
+              <Text
+                style={{color: '#438D46'}}
+                onPress={() => this.props.navigation.navigate('Register')}>
+                {' '}
+                Daftar disini
+              </Text>
+            </View>
+          </Container>
+
           {/* <View
             style={{marginTop: 13, flexDirection: 'row', alignItems: 'center'}}>
             <Text style={{color: '#576357'}}>Belum Punya akun?</Text>
             <Text style={{color: '#438D46'}}> Daftar Disini</Text>
           </View> */}
-        </Content>
+        </Container>
       </Container>
     );
   }
