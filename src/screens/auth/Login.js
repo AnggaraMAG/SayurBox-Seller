@@ -29,7 +29,10 @@ export class Login extends Component {
             <Item regular style={styles.mt}>
               <Input placeholder="Password" />
             </Item>
-            <Button full style={{backgroundColor: '#438D46', marginTop: 10}}>
+            <Button
+              full
+              style={{backgroundColor: '#438D46', marginTop: 10}}
+              onPress={() => this.props.navigation.navigate('Bottom')}>
               <Text style={{color: 'white'}}> Login </Text>
             </Button>
             <View style={{flexDirection: 'row', marginTop: 6}}>

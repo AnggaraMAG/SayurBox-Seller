@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
+import Avatar from '../assets/thumbnail/avatar.png';
 import {
   Container,
   Content,
@@ -8,7 +9,6 @@ import {
   Icon,
   Right,
   Thumbnail,
-  Avatar,
 } from 'native-base';
 import Coin from 'react-native-vector-icons/MaterialCommunityIcons';
 

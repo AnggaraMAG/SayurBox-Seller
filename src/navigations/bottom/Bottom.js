@@ -17,7 +17,7 @@ export class Bottom extends Component {
   render() {
     return (
       <Tab.Navigator
-        initialRouteName="Profile"
+        initialRouteName="Home"
         tabBarOptions={{
           activeTintColor: '#438D46',
         }}>

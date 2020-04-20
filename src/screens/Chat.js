@@ -1,18 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import Avatar from '../assets/thumbnail/avatar.png';
-import {
-  Container,
-  Header,
-  Content,
-  List,
-  ListItem,
-  Left,
-  Body,
-  Right,
-  Thumbnail,
-  Image,
-} from 'native-base';
+import {Container, Content, Thumbnail} from 'native-base';
 
 export class Chat extends Component {
   render() {
@@ -25,7 +14,9 @@ export class Chat extends Component {
             </View>
             <View style={{flex: 3, marginTop: 10}}>
               <Text>Kevin Salto</Text>
-              <Text style={{color: '#A0A0A0'}}>mas?</Text>
+              <Text style={{color: '#A0A0A0'}}>
+                saya pesan 100kg ada dapat...
+              </Text>
             </View>
             <View style={{flex: 1, marginTop: 10}}>
               <Text>3:00 pm</Text>
