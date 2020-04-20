@@ -8,6 +8,10 @@ export class Chat extends Component {
     return (
       <Container>
         <Content padder>
+          <View style={{ marginLeft: 5, marginTop: 10 }}>
+            <Text style={{ fontSize: 20 }}>Halaman History</Text>
+          </View>
+
           <View style={{ flexDirection: "row" }}>
             <View style={{ flex: 1 }}>
               <Thumbnail source={Avatar} />

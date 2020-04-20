@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
-import {ListItem} from 'native-base';
-import sayur from '../../assets/images/kol.jpg';
+import React, { Component } from "react";
+import { Text, View, Image, TouchableOpacity } from "react-native";
+import { ListItem } from "native-base";
+import sayur from "../../assets/images/kol.jpg";
 
 export class Product extends Component {
   render() {
     return (
-      <View style={{marginHorizontal: 5, marginTop: 18}}>
+      <View style={{ marginHorizontal: 5, marginTop: 18 }}>
         <TouchableOpacity>
-          <ListItem onPress={() => this.props.navigation.navigate('Detail')}>
-            <View style={{marginRight: 10}}>
+          <ListItem onPress={() => this.props.navigation.navigate("Detail")}>
+            <View style={{ marginRight: 10 }}>
               <Image
                 source={sayur}
-                style={{width: 50, height: 50, borderRadius: 5}}
+                style={{ width: 50, height: 50, borderRadius: 5 }}
               />
             </View>
             <View>

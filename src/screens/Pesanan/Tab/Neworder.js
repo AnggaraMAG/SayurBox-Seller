@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import Product from '../../../components/card/Product';
+import React, { Component } from "react";
+import Product from "../../../components/card/Product";
 
 export class Neworder extends Component {
   render() {
-    return <Product />;
+    return <Product navigation={this.props.navigation} />;
   }
 }
 

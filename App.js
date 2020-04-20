@@ -5,7 +5,8 @@ import Reset from "./src/screens/auth/Reset";
 import BottomNav from "./src/navigations/bottom/Bottom";
 import Pesanan from "./src/screens/Pesanan/Pesanan";
 import Detail from "./src/screens/Pesanan/Detail";
-
+import Landing from "./src/screens/Landing";
+import List from "./src/screens/ListProduk/list";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -16,7 +17,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Pesanan"
+          initialRouteName="Landing"
           headerMode="screen"
           screenOptions={{
             headerTintColor: "white",
@@ -35,6 +36,16 @@ export class App extends Component {
           />
           <Stack.Screen
             options={{ headerShown: false }}
+            name="Landing"
+            component={Landing}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="List"
+            component={List}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
             name="Reset Password"
             component={Reset}
           />
@@ -43,13 +54,13 @@ export class App extends Component {
             name="Bottom"
             component={BottomNav}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             options={{
               title: "Pesanan"
             }}
             name="Pesanan"
             component={Pesanan}
-          /> */}
+          />
           <Stack.Screen
             options={{
               title: "Detail"
