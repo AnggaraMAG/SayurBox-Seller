@@ -7,6 +7,9 @@ import Pesanan from "./src/screens/Pesanan/Pesanan";
 import Detail from "./src/screens/Pesanan/Detail";
 import Landing from "./src/screens/Landing";
 import List from "./src/screens/ListProduk/list";
+import Add from "./src/screens/Add";
+import History from "./src/screens/History";
+import Inbox from "./src/screens/Inbox";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -17,7 +20,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Landing"
+          initialRouteName="Home"
           headerMode="screen"
           screenOptions={{
             headerTintColor: "white",
@@ -43,6 +46,21 @@ export class App extends Component {
             options={{ headerShown: false }}
             name="List"
             component={List}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Add"
+            component={Add}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="History"
+            component={History}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Inbox"
+            component={Inbox}
           />
           <Stack.Screen
             options={{ headerShown: false }}

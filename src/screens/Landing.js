@@ -4,8 +4,9 @@ import Avatar from "../assets/thumbnail/avatar.png";
 import styles from "../styles/home";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import Icons from "react-native-vector-icons/Ionicons";
-import { Container, Content, Thumbnail, Card, CardItem } from "native-base";
-export class Shop extends Component {
+import { Container, Content, Thumbnail } from "native-base";
+
+export class Landing extends Component {
   render() {
     return (
       <Container style={styles.body}>
@@ -53,7 +54,7 @@ export class Shop extends Component {
             <View style={styles.header}>
               <View style={styles.card}>
                 <Icons.Button
-                  onPress={() => this.props.navigation.navigate("Detail")}
+                  onPress={() => this.props.navigation.navigate("Add")}
                   name="md-add"
                   color="black"
                   backgroundColor="#f8f8f8"
@@ -62,7 +63,7 @@ export class Shop extends Component {
               </View>
               <View style={styles.card}>
                 <Icon.Button
-                  onPress={() => this.props.navigation.navigate("Detail")}
+                  onPress={() => this.props.navigation.navigate("History")}
                   name="history"
                   color="black"
                   backgroundColor="#f8f8f8"
@@ -73,7 +74,7 @@ export class Shop extends Component {
             <View style={styles.header1}>
               <View style={styles.card1}>
                 <Icon.Button
-                  onPress={() => this.props.navigation.navigate("Detail")}
+                  onPress={() => this.props.navigation.navigate("Inbox")}
                   name="inbox"
                   color="black"
                   backgroundColor="#f8f8f8"
@@ -88,4 +89,4 @@ export class Shop extends Component {
   }
 }
 
-export default Shop;
+export default Landing;
