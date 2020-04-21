@@ -1,114 +1,95 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { Component } from "react";
+import Login from "./src/screens/auth/Login";
+import Register from "./src/screens/auth/Register";
+import Reset from "./src/screens/auth/Reset";
+import BottomNav from "./src/navigations/bottom/Bottom";
+import Pesanan from "./src/screens/Pesanan/Pesanan";
+import Detail from "./src/screens/Pesanan/Detail";
+import Landing from "./src/screens/Landing";
+import List from "./src/screens/ListProduk/list";
+import Add from "./src/screens/Add";
+import History from "./src/screens/History";
+import Inbox from "./src/screens/Inbox";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+const Stack = createStackNavigator();
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+export class App extends Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Home"
+          headerMode="screen"
+          screenOptions={{
+            headerTintColor: "white",
+            headerStyle: { backgroundColor: "#438D46" }
+          }}
+        >
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Login"
+            component={Login}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Register"
+            component={Register}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Landing"
+            component={Landing}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="List"
+            component={List}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Add"
+            component={Add}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="History"
+            component={History}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Inbox"
+            component={Inbox}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Reset Password"
+            component={Reset}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Bottom"
+            component={BottomNav}
+          />
+          <Stack.Screen
+            options={{
+              title: "Pesanan"
+            }}
+            name="Pesanan"
+            component={Pesanan}
+          />
+          <Stack.Screen
+            options={{
+              title: "Detail"
+            }}
+            name="Detail"
+            component={Detail}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+}
 
 export default App;
