@@ -10,7 +10,10 @@ import List from './src/screens/ListProduk/list';
 import Add from './src/screens/Add';
 import History from './src/screens/History';
 import Inbox from './src/screens/Inbox';
+import Kirim from './src/screens/Pesanan/Kirim';
+import Maptracking from './src/screens/Maptracking/Map';
 import EditPesanan from './src/screens/Pesanan/Editpesanan';
+import Complete from './src/screens/Complete/Complete';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -21,7 +24,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Edit Pesanan"
+          initialRouteName="Kirim Pesanan"
           headerMode="screen"
           screenOptions={{
             headerTintColor: 'white',
@@ -42,11 +45,7 @@ export class App extends Component {
             name="Landing"
             component={Landing}
           />
-          <Stack.Screen
-            options={{title: 'Daftar Pesanan'}}
-            name="Edit Pesanan"
-            component={EditPesanan}
-          />
+
           <Stack.Screen
             options={{headerShown: false}}
             name="List"
@@ -90,6 +89,26 @@ export class App extends Component {
             }}
             name="Detail"
             component={Detail}
+          />
+          <Stack.Screen
+            options={{title: 'Daftar Pesanan'}}
+            name="Edit Pesanan"
+            component={EditPesanan}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Kirim Pesanan"
+            component={Kirim}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Map Tracking"
+            component={Maptracking}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Complete"
+            component={Complete}
           />
         </Stack.Navigator>
       </NavigationContainer>
