@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import Product from '../../../components/card/Product';
 
 export class Send extends Component {
   render() {
-    return (
-      <View>
-        <Text> Send </Text>
-      </View>
-    );
+    return <Product navigation={this.props.navigation} />;
   }
 }
 

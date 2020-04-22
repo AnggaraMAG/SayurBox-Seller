@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Text, View } from "react-native";
+import React, {Component} from 'react';
+import {Text, View} from 'react-native';
 
 export class Detail extends Component {
   render() {
     return (
       <View>
-        <Text> Detail pesanan </Text>
+        <Text> Detail pesanannnn </Text>
       </View>
     );
   }
