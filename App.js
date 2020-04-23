@@ -5,10 +5,11 @@ import Reset from "./src/screens/auth/Reset";
 import BottomNav from "./src/navigations/bottom/Bottom";
 import Pesanan from "./src/screens/Pesanan/Pesanan";
 import Detail from "./src/screens/Pesanan/Detail";
-import Landing from "./src/screens/Landing";
+import Landing from "./src/screens/Home/Landing";
 import List from "./src/screens/ListProduk/list";
-import Add from "./src/screens/Add";
-import History from "./src/screens/History";
+import Add from "./src/screens/AddProduk/Add";
+import History from "./src/screens/History/History";
+import DetailH from "./src/screens/History/Detail";
 import Inbox from "./src/screens/Inbox";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -20,11 +21,11 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="History"
           headerMode="screen"
           screenOptions={{
-            headerTintColor: "white",
-            headerStyle: { backgroundColor: "#438D46" }
+            headerTintColor: "black",
+            headerStyle: { backgroundColor: "white" }
           }}
         >
           <Stack.Screen
@@ -53,9 +54,18 @@ export class App extends Component {
             component={Add}
           />
           <Stack.Screen
-            options={{ headerShown: false }}
+            options={{
+              title: "Activity History"
+            }}
             name="History"
             component={History}
+          />
+          <Stack.Screen
+            options={{
+              title: "23 April 2020"
+            }}
+            name="Detail History"
+            component={DetailH}
           />
           <Stack.Screen
             options={{ headerShown: false }}
