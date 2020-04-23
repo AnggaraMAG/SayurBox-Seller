@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Image} from 'react-native';
-import Avatar from '../assets/thumbnail/avatar.png';
-import styles from '../styles/home';
+import Avatar from '../../assets/thumbnail/avatar.png';
+import styles from '../../styles/home';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icons from 'react-native-vector-icons/Ionicons';
 import {Container, Content, Thumbnail} from 'native-base';

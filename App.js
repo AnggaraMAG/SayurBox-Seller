@@ -5,14 +5,15 @@ import Reset from './src/screens/auth/Reset';
 import BottomNav from './src/navigations/bottom/Bottom';
 import Pesanan from './src/screens/Pesanan/Pesanan';
 import Detail from './src/screens/Pesanan/Detail';
-import Landing from './src/screens/Landing';
+import Landing from './src/screens/Home/Landing';
 import List from './src/screens/ListProduk/list';
 import Add from './src/screens/Add';
-import History from './src/screens/History';
+import History from './src/screens/History/History';
 import Inbox from './src/screens/Inbox';
 import Kirim from './src/screens/Pesanan/Kirim';
 import Maptracking from './src/screens/Maptracking/Map';
 import EditPesanan from './src/screens/Pesanan/Editpesanan';
+import DetailH from './src/screens/History/Detail';
 import Complete from './src/screens/Complete/Complete';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -27,8 +28,8 @@ export class App extends Component {
           initialRouteName="Kirim Pesanan"
           headerMode="screen"
           screenOptions={{
-            headerTintColor: 'white',
-            headerStyle: {backgroundColor: '#438D46'},
+            headerTintColor: 'black',
+            headerStyle: {backgroundColor: 'white'},
           }}>
           <Stack.Screen
             options={{headerShown: false}}
@@ -57,9 +58,18 @@ export class App extends Component {
             component={Add}
           />
           <Stack.Screen
-            options={{headerShown: false}}
+            options={{
+              title: 'Activity History',
+            }}
             name="History"
             component={History}
+          />
+          <Stack.Screen
+            options={{
+              title: '23 April 2020',
+            }}
+            name="Detail History"
+            component={DetailH}
           />
           <Stack.Screen
             options={{headerShown: false}}
