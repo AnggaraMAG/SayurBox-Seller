@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
-import {Text, View, ScrollView} from 'react-native';
-import {styles} from '../../styles/detail';
-import {ListItem, Button} from 'native-base';
-import Modal from '../../components/modal/modal';
+import React, { Component } from "react";
+import { Text, View, ScrollView } from "react-native";
+import { styles } from "../../styles/detail";
+import { ListItem, Button } from "native-base";
 
 export class Detail extends Component {
   render() {
@@ -49,17 +48,18 @@ export class Detail extends Component {
               <Text style={styles.total}>Rp.10.000</Text>
             </ListItem>
           </View>
-          <View style={{marginHorizontal: 10}}>
+          <View style={{ marginHorizontal: 10 }}>
             <View>
               <Button
-                onPress={() => this.props.navigation.navigate('Map Tracking')}
+                onPress={() => this.props.navigation.navigate("Map Tracking")}
                 full
                 style={{
-                  backgroundColor: '#438D46',
+                  backgroundColor: "#438D46",
                   marginTop: 10,
-                  marginBottom: 10,
-                }}>
-                <Text style={{color: 'white'}}>Kirim</Text>
+                  marginBottom: 10
+                }}
+              >
+                <Text style={{ color: "white" }}>Kirim</Text>
               </Button>
             </View>
           </View>

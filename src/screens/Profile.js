@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-import Avatar from '../assets/thumbnail/avatar.png';
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import Avatar from "../assets/thumbnail/avatar.png";
 import {
   Container,
   Content,
@@ -8,9 +8,9 @@ import {
   ListItem,
   Icon,
   Right,
-  Thumbnail,
-} from 'native-base';
-import Coin from 'react-native-vector-icons/MaterialCommunityIcons';
+  Thumbnail
+} from "native-base";
+import Coin from "react-native-vector-icons/MaterialCommunityIcons";
 
 export class Profile extends Component {
   render() {
@@ -19,26 +19,29 @@ export class Profile extends Component {
         <Content>
           <View
             style={{
-              flexDirection: 'row',
+              flexDirection: "row",
               marginTop: 10,
               paddingHorizontal: 12,
-              marginBottom: 10,
-            }}>
-            <View style={{flex: 1}}>
+              marginBottom: 10
+            }}
+          >
+            <View style={{ flex: 1 }}>
               <Thumbnail source={Avatar} />
             </View>
-            <View style={{flex: 3, marginTop: 10}}>
-              <Text style={{fontSize: 20}}>Kevin Salto</Text>
+            <View style={{ flex: 3, marginTop: 10 }}>
+              <Text style={{ fontSize: 20 }}>Kevin Salto</Text>
             </View>
             <View />
           </View>
-          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-around" }}
+          >
             <View>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: "row" }}>
                 <Coin name="coin" size={20} />
                 <Text>Coin Saya</Text>
               </View>
-              <Text style={{marginHorizontal: 20, color: '#438D46'}}>
+              <Text style={{ marginHorizontal: 20, color: "#438D46" }}>
                 60 Poin
               </Text>
             </View>
@@ -48,63 +51,63 @@ export class Profile extends Component {
           </View>
           <View
             style={{
-              backgroundColor: '#f2f2f4',
-              height: 17,
+              backgroundColor: "#f2f2f4",
+              height: 17
             }}
           />
           <List>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Nama Toko</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Kevin</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Jalanin aja dulu</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>0837476374</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>kevin@gmail.com</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>No KTP</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Foto KTP</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Deskripsi</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
-            <ListItem selected style={{justifyContent: 'space-between'}}>
+            <ListItem selected style={{ justifyContent: "space-between" }}>
               <Text>Logo Toko</Text>
               <Right>
-                <Icon name="arrow-forward" style={{color: '#438D46'}} />
+                <Icon name="arrow-forward" style={{ color: "#438D46" }} />
               </Right>
             </ListItem>
           </List>

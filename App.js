@@ -7,14 +7,15 @@ import Pesanan from "./src/screens/Pesanan/Pesanan";
 import Detail from "./src/screens/Pesanan/Detail";
 import Landing from "./src/screens/Home/Landing";
 import List from "./src/screens/ListProduk/list";
-import Add from "./src/screens/Add";
 import History from "./src/screens/History/History";
 import Inbox from "./src/screens/Inbox";
 import Kirim from "./src/screens/Pesanan/Kirim";
 import Maptracking from "./src/screens/Maptracking/Map";
 import EditPesanan from "./src/screens/Pesanan/Editpesanan";
 import DetailH from "./src/screens/History/Detail";
+import DetailL from "./src/screens/ListProduk/listdetail";
 import Complete from "./src/screens/Complete/Complete";
+import AddProduk from "./src/screens/AddProduk/Add";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -25,7 +26,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Kirim Pesanan"
+          initialRouteName="Home"
           headerMode="screen"
           screenOptions={{
             headerTintColor: "black",
@@ -47,17 +48,24 @@ export class App extends Component {
             name="Landing"
             component={Landing}
           />
-
+          <Stack.Screen
+            options={{ title: "Add Product" }}
+            name="Add Product"
+            component={AddProduk}
+          />
           <Stack.Screen
             options={{ headerShown: false }}
             name="List"
             component={List}
           />
           <Stack.Screen
-            options={{ headerShown: false }}
-            name="Add"
-            component={Add}
+            options={{
+              title: "Detail List"
+            }}
+            name="Detail Product"
+            component={DetailL}
           />
+
           <Stack.Screen
             options={{
               title: "Activity History"
@@ -101,6 +109,7 @@ export class App extends Component {
             name="Detail"
             component={Detail}
           />
+
           <Stack.Screen
             options={{ title: "Daftar Pesanan" }}
             name="Edit Pesanan"
