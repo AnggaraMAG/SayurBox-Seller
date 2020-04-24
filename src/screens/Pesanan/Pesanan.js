@@ -3,7 +3,7 @@ import { Text, View, Image } from "react-native";
 import Order from "../../screens/Pesanan/Tab/Neworder";
 import Proses from "../../screens/Pesanan/Tab/Process";
 import Send from "../../screens/Pesanan/Tab/Send";
-import Grafik from "../../assets/images/grafik.webp";
+// import Grafik from "../../assets/images/grafik.webp";
 
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 

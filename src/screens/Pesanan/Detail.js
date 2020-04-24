@@ -72,6 +72,7 @@ export class Detail extends Component {
             >
               <View style={{ marginRight: 5 }}>
                 <Button
+                  onPress={() => this.props.navigation.navigate("Edit Pesanan")}
                   full
                   style={{
                     backgroundColor: "#438D46",
