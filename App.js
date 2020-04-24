@@ -8,12 +8,13 @@ import Detail from "./src/screens/Pesanan/Detail";
 import Landing from "./src/screens/Home/Landing";
 import List from "./src/screens/ListProduk/list";
 import History from "./src/screens/History/History";
-import Inbox from "./src/screens/Inbox";
+import Inbox from "./src/screens/Inbox/Inbox";
 import Kirim from "./src/screens/Pesanan/Kirim";
 import Maptracking from "./src/screens/Maptracking/Map";
 import EditPesanan from "./src/screens/Pesanan/Editpesanan";
 import DetailH from "./src/screens/History/Detail";
 import DetailL from "./src/screens/ListProduk/listdetail";
+import DetailI from "./src/screens/Inbox/InboxDetail";
 import Complete from "./src/screens/Complete/Complete";
 import AddProduk from "./src/screens/AddProduk/Add";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -81,9 +82,14 @@ export class App extends Component {
             component={DetailH}
           />
           <Stack.Screen
-            options={{ headerShown: false }}
+            options={{ title: "Inbox" }}
             name="Inbox"
             component={Inbox}
+          />
+          <Stack.Screen
+            options={{ title: "Detail Inbox" }}
+            name="Detail Inbox"
+            component={DetailI}
           />
           <Stack.Screen
             options={{ headerShown: false }}
