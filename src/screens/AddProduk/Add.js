@@ -125,15 +125,6 @@ export class Add extends Component {
             </View>
           </View>
         </View>
-        {/* <View>
-          <Button
-            block
-            success
-            onPress={() => this.props.navigation.navigate("Landing")}
-          >
-            <Text>Tambah</Text>
-          </Button>
-        </View> */}
       </Container>
     );
   }

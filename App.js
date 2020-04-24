@@ -27,7 +27,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="Detail"
           headerMode="screen"
           screenOptions={{
             headerTintColor: "black",
@@ -66,7 +66,6 @@ export class App extends Component {
             name="Detail Product"
             component={DetailL}
           />
-
           <Stack.Screen
             options={{
               title: "Activity History"
@@ -115,7 +114,6 @@ export class App extends Component {
             name="Detail"
             component={Detail}
           />
-
           <Stack.Screen
             options={{ title: "Daftar Pesanan" }}
             name="Edit Pesanan"
