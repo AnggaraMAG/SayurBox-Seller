@@ -61,12 +61,13 @@ export class Detail extends Component {
               <Text style={styles.total}>Rp.1.000.000</Text>
             </ListItem>
           </View>
-          <View style={{ flexDirection: "row", flex: 1 }}>
+          <View style={{ flex: 1 }}>
             <View
               style={{
                 marginHorizontal: 10,
                 flexDirection: "row",
-                marginTop: 5
+                marginTop: 5,
+                justifyContent: "space-between"
               }}
             >
               <View style={{ marginRight: 5 }}>
