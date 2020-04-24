@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, ScrollView} from 'react-native';
 import {styles} from '../../styles/detail';
 import {ListItem, Button} from 'native-base';
-import Modal from '../../components/modal/modal';
+// import Modal from '../../components/modal/modal';
 
 export class Detail extends Component {
   render() {
@@ -61,15 +61,17 @@ export class Detail extends Component {
               <Text style={styles.total}>Rp.1.000.000</Text>
             </ListItem>
           </View>
-          <View style={{flexDirection: 'row', flex: 1}}>
+          <View style={{flex: 1}}>
             <View
               style={{
                 marginHorizontal: 10,
                 flexDirection: 'row',
                 marginTop: 5,
+                justifyContent: 'space-between',
               }}>
               <View style={{marginRight: 5}}>
                 <Button
+                  onPress={() => this.props.navigation.navigate('Edit Pesanan')}
                   full
                   style={{
                     backgroundColor: '#438D46',
