@@ -24,6 +24,7 @@ export class Map extends Component {
           </View>
           <View>
             <Button
+              onPress={() => this.props.navigation.navigate('Landing')}
               full
               style={{
                 backgroundColor: '#438D46',

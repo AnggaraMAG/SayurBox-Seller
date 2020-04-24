@@ -78,7 +78,7 @@ export class Editpesanan extends Component {
             <Button
               full
               style={{backgroundColor: '#438D46', marginTop: 10, padding: 10}}
-              onPress={() => this.props.navigation.navigate('None')}>
+              onPress={() => this.props.navigation.navigate('Kirim Pesanan')}>
               <Text style={{color: 'white'}}> Konfirm </Text>
             </Button>
           </View>
