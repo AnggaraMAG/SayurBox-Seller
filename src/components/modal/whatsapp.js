@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {Text, View} from 'react-native';
 import {Button} from 'native-base';
 import RBSheet from 'react-native-raw-bottom-sheet';
 
-export default class bottomsheet extends Component {
+export class whatsapp extends Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -15,7 +15,7 @@ export default class bottomsheet extends Component {
             marginTop: 10,
             padding: 60,
           }}>
-          <Text style={{color: 'white'}}>Terima</Text>
+          <Text style={{color: 'white'}}>Hub Pembeli</Text>
         </Button>
         <RBSheet
           ref={ref => {
@@ -32,7 +32,7 @@ export default class bottomsheet extends Component {
           <View>
             <View>
               <Text style={{fontSize: 20}}>
-                Apakah Pembelian Sesuai pesanan?
+                Apakah anda ingin menghubungi pembeli?
               </Text>
             </View>
             <View style={{marginTop: 10}}>
@@ -44,7 +44,7 @@ export default class bottomsheet extends Component {
                   marginTop: 10,
                   padding: 0,
                 }}>
-                <Text style={{color: 'white'}}>Ya</Text>
+                <Text style={{color: 'white'}}>WhatsApp</Text>
               </Button>
             </View>
             <View>
@@ -56,7 +56,7 @@ export default class bottomsheet extends Component {
                   marginTop: 10,
                   padding: 60,
                 }}>
-                <Text style={{color: 'white'}}>Edit Pesan</Text>
+                <Text style={{color: 'white'}}>Call</Text>
               </Button>
             </View>
           </View>
@@ -65,3 +65,5 @@ export default class bottomsheet extends Component {
     );
   }
 }
+
+export default whatsapp;
