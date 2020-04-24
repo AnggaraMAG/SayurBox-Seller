@@ -1,16 +1,86 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
-import { Container, Content, Thumbnail } from "native-base";
-
+import { Text, View, Image } from "react-native";
+import { Container, Content, Card, Header, Button, Left } from "native-base";
+import { styles } from "../../styles/list";
+import { ScrollView } from "react-native-gesture-handler";
+import sayur from "../../assets/images/jpg1.jpg";
+import star from "../../assets/icon/star.png";
+import gps from "../../assets/icon/gps.png";
+import bike from "../../assets/icon/bike.png";
+import discount from "../../assets/icon/discount.png";
 export class List extends Component {
   render() {
     return (
       <Container>
-        <Content padder>
-          <View style={{ marginLeft: 5, marginTop: 10 }}>
-            <Text style={{ fontSize: 20 }}>Halaman List Product</Text>
+        <Card style={styles.cardFilter}>
+          <Content padder>
+            <ScrollView
+              horizontal
+              style={{
+                display: "flex"
+              }}
+              showsHorizontalScrollIndicator={false}
+            >
+              <View style={{ flexDirection: "row" }}>
+                <Button style={styles.filter}>
+                  <Text>Click Me!</Text>
+                </Button>
+                <Button style={styles.filter}>
+                  <Text>Click Me!</Text>
+                </Button>
+                <Button style={styles.filter}>
+                  <Text>Click Me!</Text>
+                </Button>
+                <Button style={styles.filter}>
+                  <Text>Click Me!</Text>
+                </Button>
+              </View>
+            </ScrollView>
+          </Content>
+        </Card>
+        <View style={styles.listItem}>
+          <View style={{ flexDirection: "row" }}>
+            <View style={{ flex: 1 }}>
+              <Image source={sayur} style={styles.imgItem} />
+              <Text style={styles.promo}>promo</Text>
+            </View>
+            <View style={{ flex: 2 }}>
+              <Text
+                style={styles.listTitle}
+                onPress={() => this.props.navigation.navigate("Detail Product")}
+              >
+                Gokana Ramen & tepan
+              </Text>
+              <Text style={styles.description}>masakan jepang</Text>
+
+              {/* ---------------------------------promo & discount--------------------------------------------------- */}
+              <View style={{ flexDirection: "row", marginTop: 5 }}>
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: "row"
+                  }}
+                >
+                  <Image source={star} style={{ width: 20, height: 20 }} />
+                  <Text style={{ fontSize: 13 }}> 4,5</Text>
+                </View>
+                <View style={{ flex: 2, flexDirection: "row" }}>
+                  <Image source={gps} style={{ width: 20, height: 20 }} />
+                  <Text> 2,2 km</Text>
+                </View>
+                <View style={{ flex: 2, flexDirection: "row" }}>
+                  <Image source={bike} style={{ width: 20, height: 20 }} />
+                  <Text> Rp.40.000</Text>
+                </View>
+              </View>
+              <View style={{ flex: 1, flexDirection: "row", marginTop: 3 }}>
+                <Image source={discount} style={{ width: 20, height: 20 }} />
+                <Text> Discount 40% dengan totong</Text>
+              </View>
+            </View>
           </View>
-        </Content>
+          <View style={styles.hr} />
+        </View>
       </Container>
     );
   }

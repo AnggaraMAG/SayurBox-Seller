@@ -5,21 +5,24 @@ export default StyleSheet.create({
     padding: 5
   },
   logo: {
-    width: 180,
-    height: 145,
-    borderRadius: 15,
+    width: "100%",
+    height: "100%",
+    borderRadius: 0,
     borderColor: "#F7F7F7"
   },
-  header: {
+  header1: {
+    alignItems: "center"
+  },
+  header2: {
     flex: 1
   },
   card: {
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    width: 185,
-    height: 150,
-    borderRadius: 15,
-    elevation: 5
+    width: "100%",
+    height: 200,
+    borderRadius: 0,
+    borderColor: "black",
+    borderWidth: 1,
+    margin: 5
   }
 });
