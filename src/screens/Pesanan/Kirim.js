@@ -3,7 +3,7 @@ import {Text, View, ScrollView} from 'react-native';
 import {styles} from '../../styles/detail';
 import {ListItem, Button} from 'native-base';
 import Modal from '../../components/modal/modal';
-
+// test
 export class Detail extends Component {
   render() {
     return (

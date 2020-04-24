@@ -86,6 +86,7 @@ export class Detail extends Component {
             </View>
           </View>
         </ScrollView>
+        {/* test */}
       </>
     );
   }
