@@ -17,6 +17,7 @@ export class Editpesanan extends Component {
   render() {
     return (
       <ScrollView>
+        <View />
         <Card>
           <CardItem>
             <Left>

@@ -25,7 +25,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Login"
+          initialRouteName="Detail"
           headerMode="screen"
           screenOptions={{
             headerTintColor: 'black',
