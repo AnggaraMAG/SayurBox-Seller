@@ -37,7 +37,7 @@ export class Editpesanan extends Component {
                     padding: 10
                   }}
                 >
-                  <Text style={{ color: "white" }}>-</Text>
+                  <Text style={{ color: "white" }}>+</Text>
                 </Button>
                 <Text
                   style={{
@@ -57,7 +57,7 @@ export class Editpesanan extends Component {
                     padding: 10
                   }}
                 >
-                  <Text style={{ color: "white" }}>+</Text>
+                  <Text style={{ color: "white" }}>-</Text>
                 </Button>
               </View>
             </Right>
@@ -75,7 +75,7 @@ export class Editpesanan extends Component {
             <Button
               full
               style={{ backgroundColor: "#438D46", marginTop: 10, padding: 10 }}
-              // onPress={() => this.props.navigation.navigate("None")}
+              onPress={() => this.props.navigation.navigate("None")}
             >
               <Text style={{ color: "white" }}> Cancel </Text>
             </Button>
@@ -84,7 +84,7 @@ export class Editpesanan extends Component {
             <Button
               full
               style={{ backgroundColor: "#438D46", marginTop: 10, padding: 10 }}
-              // onPress={() => this.props.navigation.navigate("None")}
+              onPress={() => this.props.navigation.navigate("Kirim Pesanan")}
             >
               <Text style={{ color: "white" }}> Konfirm </Text>
             </Button>

@@ -19,6 +19,7 @@ import Complete from "./src/screens/Complete/Complete";
 import AddProduk from "./src/screens/AddProduk/Add";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import Profile from "./src/screens/Profile";
 
 const Stack = createStackNavigator();
 
@@ -27,7 +28,7 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Detail"
+          initialRouteName="Home"
           headerMode="screen"
           screenOptions={{
             headerTintColor: "black",
@@ -61,7 +62,7 @@ export class App extends Component {
           />
           <Stack.Screen
             options={{
-              title: "Detail List"
+              title: "Detail Product"
             }}
             name="Detail Product"
             component={DetailL}
@@ -133,6 +134,11 @@ export class App extends Component {
             options={{ headerShown: false }}
             name="Complete"
             component={Complete}
+          />
+          <Stack.Screen
+            options={{ title: "Profile" }}
+            name="Profile"
+            component={Profile}
           />
         </Stack.Navigator>
       </NavigationContainer>

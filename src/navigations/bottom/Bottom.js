@@ -7,10 +7,8 @@ import History from "../../screens/History/History";
 import Profile from "../../screens/Profile";
 import Icon from "react-native-vector-icons/Ionicons";
 import Icon2 from "react-native-vector-icons/Octicons";
-import Icon3 from "react-native-vector-icons/Feather";
 import Icon4 from "react-native-vector-icons/FontAwesome5";
 import Icon5 from "react-native-vector-icons/FontAwesome";
-import { View, Text } from "native-base";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +16,7 @@ export class Bottom extends Component {
   render() {
     return (
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="List Product"
         tabBarOptions={{
           activeTintColor: "#438D46"
         }}

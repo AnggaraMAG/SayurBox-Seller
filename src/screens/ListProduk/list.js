@@ -8,6 +8,7 @@ import star from "../../assets/icon/star.png";
 import gps from "../../assets/icon/gps.png";
 import bike from "../../assets/icon/bike.png";
 import discount from "../../assets/icon/discount.png";
+
 export class List extends Component {
   render() {
     return (

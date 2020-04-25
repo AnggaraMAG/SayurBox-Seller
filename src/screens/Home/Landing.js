@@ -21,11 +21,16 @@ export class Landing extends Component {
             <View style={{ flexDirection: "row" }}>
               <Thumbnail source={Avatar} />
               <View style={{ marginLeft: 5, marginTop: 10 }}>
-                <Text style={{ fontSize: 20 }}>Kevin Salto</Text>
+                <Text
+                  style={{ fontSize: 20 }}
+                  onPress={() => this.props.navigation.navigate("Profile")}
+                >
+                  Kevin
+                </Text>
               </View>
             </View>
             <View style={{ marginTop: 10 }}>
-              <Text style={{ fontSize: 20 }}>Rp.999999</Text>
+              <Text style={{ fontSize: 20 }}>Rp.-</Text>
             </View>
           </View>
 
