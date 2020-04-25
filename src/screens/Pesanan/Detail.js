@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Text, View, ScrollView} from 'react-native';
-import {styles} from '../../styles/detail';
-import {ListItem, Button} from 'native-base';
-import Klik from '../../components/modal/bottomsheet';
-import Hubpembeli from '../../components/modal/whatsapp';
+import React, { Component } from "react";
+import { Text, View, ScrollView } from "react-native";
+import { styles } from "../../styles/detail";
+import { ListItem, Button } from "native-base";
+import Klik from "../../components/modal/bottomsheet";
+import Hubpembeli from "../../components/modal/whatsapp";
 
 export class Detail extends Component {
   render() {
@@ -56,31 +56,33 @@ export class Detail extends Component {
               <Text style={styles.total}>Rp.100.000</Text>
             </ListItem>
           </View>
-          <View style={{flexDirection: 'row', flex: 1}}>
-            <View style={{marginLeft: 14}}>
+          <View style={{ flexDirection: "row", flex: 1 }}>
+            <View style={{ marginLeft: 14 }}>
               <Klik navigation={this.props.navigation} />
             </View>
             <View
               style={{
                 marginHorizontal: 10,
-                flexDirection: 'row',
-                marginTop: 5,
-              }}>
-              <View style={{marginRight: 5}}>
+                flexDirection: "row",
+                marginTop: 5
+              }}
+            >
+              <View style={{ marginRight: 5 }}>
                 <Button
-                  onPress={() => this.props.navigation.navigate('Edit Pesanan')}
+                  onPress={() => this.props.navigation.navigate("Edit Pesanan")}
                   full
                   style={{
-                    backgroundColor: '#438D46',
+                    backgroundColor: "#438D46",
                     marginTop: 10,
-                    padding: 60,
-                  }}>
-                  <Text style={{color: 'white'}}>Cancel</Text>
+                    padding: 60
+                  }}
+                >
+                  <Text style={{ color: "white" }}>Cancel</Text>
                 </Button>
               </View>
             </View>
           </View>
-          <View style={{marginHorizontal: 10}}>
+          <View style={{ marginHorizontal: 10 }}>
             <View>
               <Hubpembeli navigation={this.props.navigation} />
             </View>
