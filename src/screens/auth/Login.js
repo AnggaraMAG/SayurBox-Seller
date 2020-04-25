@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Text, View, Image} from 'react-native';
-import {styles} from '../../styles/styles';
-import sayur from '../../assets/images/jpg1.jpg';
-import {Form, Item, Input, Button, Container} from 'native-base';
-import AsyncStorage from '@react-native-community/async-storage';
+import React, { Component } from "react";
+import { Text, View, Image } from "react-native";
+import { styles } from "../../styles/styles";
+import sayur from "../../assets/images/jpg1.jpg";
+import { Form, Item, Input, Button, Container } from "native-base";
+// import AsyncStorage from '@react-native-community/async-storage';
 
 export class Login extends Component {
   render() {
@@ -11,19 +11,19 @@ export class Login extends Component {
       <Container>
         <Image source={sayur} style={styles.ImgSayur} />
 
-        <Container style={{padding: 10}}>
+        <Container style={{ padding: 10 }}>
           <View>
             <Text style={styles.Size}>
               Login untuk mempermudah anda melacak orders
             </Text>
           </View>
-          <View style={{padding: 10}}>
+          <View style={{ padding: 10 }}>
             <Text style={styles.gray}>
               Anda dapat melanjutkan belanja dengan login menggunakan social
               media
             </Text>
           </View>
-          <Form style={{padding: 10}}>
+          <Form style={{ padding: 10 }}>
             <Item regular>
               <Input placeholder="Email" Size="small" />
             </Item>
@@ -32,29 +32,30 @@ export class Login extends Component {
             </Item>
             <Button
               full
-              style={{backgroundColor: '#438D46', marginTop: 10}}
-              onPress={() => this.props.navigation.navigate('Landing')}>
-              <Text style={{color: 'white'}}> Login </Text>
+              style={{ backgroundColor: "#438D46", marginTop: 10 }}
+              onPress={() => this.props.navigation.navigate("Landing")}
+            >
+              <Text style={{ color: "white" }}> Login </Text>
             </Button>
-            <View style={{flexDirection: 'row', marginTop: 6}}>
-              <Text style={{color: '#576357'}}>Lupa Password?</Text>
+            <View style={{ flexDirection: "row", marginTop: 6 }}>
+              <Text style={{ color: "#576357" }}>Lupa Password?</Text>
               <Text
-                style={{color: '#438D46'}}
-                onPress={() =>
-                  this.props.navigation.navigate('Reset Password')
-                }>
-                {' '}
+                style={{ color: "#438D46" }}
+                onPress={() => this.props.navigation.navigate("Reset Password")}
+              >
+                {" "}
                 Klik Disini
               </Text>
             </View>
           </Form>
-          <Container style={{alignItems: 'center'}}>
-            <View style={{flexDirection: 'row', marginTop: 40}}>
-              <Text style={{color: '#576357'}}>Belum punya account?</Text>
+          <Container style={{ alignItems: "center" }}>
+            <View style={{ flexDirection: "row", marginTop: 40 }}>
+              <Text style={{ color: "#576357" }}>Belum punya account?</Text>
               <Text
-                style={{color: '#438D46'}}
-                onPress={() => this.props.navigation.navigate('Register')}>
-                {' '}
+                style={{ color: "#438D46" }}
+                onPress={() => this.props.navigation.navigate("Register")}
+              >
+                {" "}
                 Daftar disini
               </Text>
             </View>
