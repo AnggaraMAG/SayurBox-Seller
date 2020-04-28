@@ -1,19 +1,38 @@
 import React, { Component } from "react";
-import { View, Image, TextInput } from "react-native";
+import { View, Image, TextInput, Button, Text } from "react-native";
 import styles from "../../styles/add";
 import petani from "../../assets/images/add.png";
-
-import { Container, Form, Item, Input, Button, Text, Right } from "native-base";
+import ImagePicker from "react-native-image-picker";
+import { Container } from "native-base";
 export class Add extends Component {
+  state = {
+    photo: null
+  };
+
+  handleChoosePhoto = () => {
+    const options = {
+      noData: true
+    };
+    ImagePicker.launchImageLibrary(options, response => {
+      console.log("response", response);
+      if (response.uri) {
+        this.setState({ photo: response });
+      }
+    });
+  };
   render() {
+    const { photo } = this.state;
     return (
       <>
         <Container style={styles.container}>
           <View>
             <View style={styles.header1}>
               <View style={styles.card}>
-                <Image source={petani} style={styles.logo} />
+                {photo && (
+                  <Image source={{ uri: photo.uri }} style={styles.logo} />
+                )}
               </View>
+              <Button title="Choose Photo" onPress={this.handleChoosePhoto} />
             </View>
             <View style={{ justifyContent: "center" }}>
               <TextInput
@@ -50,7 +69,6 @@ export class Add extends Component {
               <TextInput
                 style={{
                   height: 40,
-                  // width: "60%",
                   marginTop: 5,
                   borderColor: "gray",
                   borderWidth: 1
@@ -97,7 +115,7 @@ export class Add extends Component {
                   paddingBottom: 16
                 }}
               >
-                <View style={{ marginRight: "5%" }}>
+                {/* <View style={{ marginRight: "5%" }}>
                   <Button
                     full
                     style={{
@@ -122,7 +140,7 @@ export class Add extends Component {
                   >
                     <Text style={{ color: "white" }}> Konfirm </Text>
                   </Button>
-                </View>
+                </View> */}
               </View>
             </View>
           </View>

@@ -97,7 +97,7 @@ export class App extends Component {
             component={Reset}
           />
           <Stack.Screen
-            options={{ headerShown: false }}
+            options={{ title: "Back" }}
             name="Bottom"
             component={BottomNav}
           />
