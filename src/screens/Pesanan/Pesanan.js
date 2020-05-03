@@ -13,7 +13,7 @@ export class Pesanan extends Component {
   render() {
     return (
       <>
-        <View style={{marginHorizontal: 10, backgroundColor: 'white'}} />
+        <View style={{marginHorizontal: 10}} />
         <Top.Navigator>
           <Top.Screen name="Pesanan" component={Order} />
           <Top.Screen name="Proses" component={Proses} />

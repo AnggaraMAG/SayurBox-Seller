@@ -1,84 +1,160 @@
 import React, {Component} from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
-import {Container, Content, Card, Button} from 'native-base';
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+  FlatList,
+  ScrollView,
+  SafeAreaView,
+} from 'react-native';
 import {styles} from '../../styles/list';
-import {ScrollView} from 'react-native-gesture-handler';
 import sayur from '../../assets/images/jpg1.jpg';
-import star from '../../assets/icon/star.png';
-import gps from '../../assets/icon/gps.png';
-import bike from '../../assets/icon/bike.png';
-import discount from '../../assets/icon/discount.png';
+import DATA from '../../json/list.json';
 
 export class List extends Component {
   render() {
+    const {width, height} = Dimensions.get('window');
     return (
-      <Container>
-        <Card style={styles.cardFilter}>
-          <Content padder>
-            <ScrollView
-              horizontal
-              style={{
-                display: 'flex',
-              }}
-              showsHorizontalScrollIndicator={false}>
-              <View style={{flexDirection: 'row'}}>
-                <Button style={styles.filter}>
-                  <Text>Click Me!</Text>
-                </Button>
-                <Button style={styles.filter}>
-                  <Text>Click Me!</Text>
-                </Button>
-                <Button style={styles.filter}>
-                  <Text>Click Me!</Text>
-                </Button>
-                <Button style={styles.filter}>
-                  <Text>Click Me!</Text>
-                </Button>
+      <SafeAreaView>
+        <ScrollView>
+          {/* // Header */}
+          <View style={{backgroundColor: 'white', height: '100%'}}>
+            <View>
+              {/* CONTENT 1 */}
+              <View
+                style={{
+                  marginRight: 10,
+                  marginLeft: 10,
+                  marginBottom: 10,
+                  marginTop: 10,
+                }}>
+                <Text style={{fontWeight: 'bold', fontStyle: 'italic'}}>
+                  Jamur
+                </Text>
               </View>
-            </ScrollView>
-          </Content>
-        </Card>
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate('Detail Product')}>
-          <View style={styles.listItem}>
-            <View style={{flexDirection: 'row'}}>
-              <View style={{flex: 1}}>
-                <Image source={sayur} style={styles.imgItem} />
-                <Text style={styles.promo}>promo</Text>
-              </View>
-              <View style={{flex: 2}}>
-                <Text style={styles.listTitle}>Tomat Italia</Text>
-                <Text style={styles.description}>Sayuran Segar</Text>
-
-                {/* ---------------------------------promo & discount--------------------------------------------------- */}
-                <View style={{flexDirection: 'row', marginTop: 5}}>
+              <FlatList
+                data={DATA}
+                renderItem={({item}) => (
                   <View
                     style={{
-                      flex: 1,
-                      flexDirection: 'row',
+                      backgroundColor: 'white',
+                      borderColor: '#669F43',
+                      borderRadius: 5,
+                      borderStyle: 'solid',
+                      borderWidth: 1,
+                      marginLeft: 10,
+                      marginRight: 10,
+                      marginBottom: 5,
                     }}>
-                    <Image source={star} style={{width: 20, height: 20}} />
-                    <Text style={{fontSize: 13}}> 4,5</Text>
+                    <TouchableOpacity
+                      onPress={() =>
+                        this.props.navigation.navigate('Edit Produk')
+                      }>
+                      <View>
+                        <View style={{flexDirection: 'row'}}>
+                          <View style={{flex: 1}}>
+                            <Image source={sayur} style={styles.imgItem} />
+                          </View>
+                          <View style={{flex: 2}}>
+                            <Text style={styles.text1}>{item.name}</Text>
+                            <Text style={styles.text2}>Rp.{item.price}</Text>
+                            <Text style={styles.text3}>QTY:{item.qty}</Text>
+                          </View>
+                        </View>
+                      </View>
+                    </TouchableOpacity>
                   </View>
-                  <View style={{flex: 2, flexDirection: 'row'}}>
-                    <Image source={gps} style={{width: 20, height: 20}} />
-                    <Text> 2,2 km</Text>
-                  </View>
-                  <View style={{flex: 2, flexDirection: 'row'}}>
-                    <Image source={bike} style={{width: 20, height: 20}} />
-                    <Text> Rp.40.000</Text>
-                  </View>
-                </View>
-                <View style={{flex: 1, flexDirection: 'row', marginTop: 3}}>
-                  <Image source={discount} style={{width: 20, height: 20}} />
-                  <Text> Discount 40%</Text>
-                </View>
+                )}
+                keyExtractor={item => item.id}
+              />
+              {/* CONTENT 2 */}
+              <View style={{marginRight: 10, marginLeft: 10, marginBottom: 10}}>
+                <Text style={{fontWeight: 'bold', fontStyle: 'italic'}}>
+                  Sayuran Segar
+                </Text>
               </View>
+              <FlatList
+                data={DATA}
+                renderItem={({item}) => (
+                  <View
+                    style={{
+                      backgroundColor: 'white',
+                      borderColor: '#669F43',
+                      borderRadius: 5,
+                      borderStyle: 'solid',
+                      borderWidth: 1,
+                      marginLeft: 10,
+                      marginRight: 10,
+                      marginBottom: 5,
+                    }}>
+                    <TouchableOpacity
+                      onPress={() =>
+                        this.props.navigation.navigate('Edit Produk')
+                      }>
+                      <View>
+                        <View style={{flexDirection: 'row'}}>
+                          <View style={{flex: 1}}>
+                            <Image source={sayur} style={styles.imgItem} />
+                          </View>
+                          <View style={{flex: 2}}>
+                            <Text style={styles.text1}>{item.name}</Text>
+                            <Text style={styles.text2}>Rp.{item.price}</Text>
+                            <Text style={styles.text3}>QTY:{item.qty}</Text>
+                          </View>
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                )}
+                keyExtractor={item => item.id}
+              />
             </View>
-            <View style={styles.hr} />
+            {/* CONTENT 2 */}
+            <View style={{marginRight: 10, marginLeft: 10, marginBottom: 10}}>
+              <Text style={{fontWeight: 'bold', fontStyle: 'italic'}}>
+                Sayuran Segar
+              </Text>
+            </View>
+            <FlatList
+              data={DATA}
+              renderItem={({item}) => (
+                <View
+                  style={{
+                    backgroundColor: 'white',
+                    borderColor: '#669F43',
+                    borderRadius: 5,
+                    borderStyle: 'solid',
+                    borderWidth: 1,
+                    marginLeft: 10,
+                    marginRight: 10,
+                    marginBottom: 5,
+                  }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      this.props.navigation.navigate('Edit Produk')
+                    }>
+                    <View>
+                      <View style={{flexDirection: 'row'}}>
+                        <View style={{flex: 1}}>
+                          <Image source={sayur} style={styles.imgItem} />
+                        </View>
+                        <View style={{flex: 2}}>
+                          <Text style={styles.text1}>{item.name}</Text>
+                          <Text style={styles.text2}>Rp.{item.price}</Text>
+                          <Text style={styles.text3}>QTY:{item.qty}</Text>
+                        </View>
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              )}
+              keyExtractor={item => item.id}
+            />
           </View>
-        </TouchableOpacity>
-      </Container>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }

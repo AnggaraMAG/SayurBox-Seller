@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Jhony Deep",
+    "resi": "08560301",
+    "address": "Jln. Elang IV",
+    "price": "120.000",
+    "date": "12-04-2020"
+  },
+  {
+    "id": "2",
+    "name": "Edo Tensei",
+    "resi": "08560989",
+    "address": "Jln. Eko 69",
+    "price": "69.000",
+    "date": "02-03-2020"
+  }
+]

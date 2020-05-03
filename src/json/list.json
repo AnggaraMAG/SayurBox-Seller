@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Tomat",
+    "price": "15.000",
+    "qty": "15 Kg"
+  },
+  {
+    "id": "2",
+    "name": "Tomat Tahu",
+    "price": "25.000",
+    "qty": "45 Kg"
+  },
+  {
+    "id": "3",
+    "name": "Telur",
+    "price": "35.000",
+    "qty": "55 Kg"
+  }
+]
