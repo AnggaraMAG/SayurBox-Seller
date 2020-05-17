@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, Image, ScrollView} from 'react-native';
 import {Container, Input} from 'native-base';
-import {styles} from '../../styles/list';
+import {styles} from '../../styles/listdetail';
 
 import sayur from '../../assets/images/kol.jpg';
 

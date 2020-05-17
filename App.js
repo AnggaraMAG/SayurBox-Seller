@@ -28,11 +28,11 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Edit Produk"
+          initialRouteName="List"
           headerMode="screen"
           screenOptions={{
-            headerTintColor: 'black',
-            headerStyle: {backgroundColor: 'white'},
+            headerTintColor: 'white',
+            headerStyle: {backgroundColor: '#669F43'},
           }}>
           <Stack.Screen
             options={{headerShown: false}}
